@@ -26,6 +26,20 @@ When changing the Apps Script code later, use **Deploy > Manage deployments > Ed
 
 ## Everyday use
 
+### Find your spreadsheet and receipts
+
+Open [Google Drive](https://drive.google.com) using the account that ran `setupGoogleStorage`. Search for **RAB - Rumah Kos Puri** and open the spreadsheet. Its **categories** tab contains stages and budgets; **payments** contains payment records and receipt links. The separate folder **RAB Puri - Bukti Pembayaran** contains uploaded receipt photos and PDFs.
+
+If you cannot find the spreadsheet, open Apps Script > Project Settings > Script Properties and copy `SPREADSHEET_ID`. Open `https://docs.google.com/spreadsheets/d/YOUR_SPREADSHEET_ID/edit`, replacing the placeholder with that ID. If the property is missing, run `setupGoogleStorage` first. The setup execution log also prints both file and folder links.
+
+### Attach a receipt
+
+Open the dashboard's **Input Realisasi** tab and scroll below **Catatan**. The **Lampiran Bukti Pembayaran (opsional)** section has a file chooser. Choose a photo or PDF, then click **Simpan Realisasi**. In **Laporan**, use **Lihat** in the **Bukti** column to open the saved receipt.
+
+If this section is missing from the live website, check that Vercel has successfully deployed the latest commit to the production domain, then refresh the page. Saving environment variables alone does not deploy source-code changes.
+
+### Dashboard screens
+
 - **Dashboard:** budget, spending, remaining balance, and stage progress.
 - **Input Realisasi:** choose a stage, enter the date and amount, and optionally attach one receipt.
 - **Laporan:** view saved payments, open receipt links, or delete a report. Original receipts stay in Drive as an archive after deleting a report.
