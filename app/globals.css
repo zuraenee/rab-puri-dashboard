@@ -170,6 +170,32 @@ body {
   min-height: 70px;
 }
 
+.receipt-preview {
+  border: 1px dashed #c8d0c7;
+  border-radius: 10px;
+  padding: 10px;
+  background: #f7f5f0;
+}
+
+.receipt-preview img {
+  display: block;
+  max-width: 100%;
+  max-height: 220px;
+  margin: 0 auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.receipt-link {
+  color: #1a2b3c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.receipt-link:hover {
+  text-decoration: underline;
+}
+
 .primary-button {
   margin-top: 10px;
   background: #1a2b3c;
@@ -226,4 +252,42 @@ body {
   width:180px;
   padding:8px;
   font-size:15px;
+}
+
+.form-fields {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+.attachment-section {
+  padding: 14px;
+  border: 1px dashed #a9b8ad;
+  border-radius: 8px;
+  background: #f3f5ef;
+}
+
+.attachment-section input { width: 100%; background: white; }
+.field-help { font-size: 13px; line-height: 1.5; color: #526158; }
+.attachment-details { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin: 10px 0; }
+.attachment-details span { overflow-wrap: anywhere; font-size: 13px; }
+.receipt-preview img { width: auto; height: auto; }
+.status-message { padding: 14px; margin: 0 0 14px; background: #e3ede6; border: 1px solid #bdcfc1; border-radius: 8px; line-height: 1.5; }
+.error-message { background: #fff0eb; border-color: #d9b1a7; }
+.field-error { color: #902e21; font-size: 13px; line-height: 1.5; margin: 6px 0; }
+.field-error:empty { display: none; }
+.secondary-button { border: 1px solid #a9b8ad; background: white; color: #1a2b3c; padding: 8px 12px; border-radius: 6px; cursor: pointer; }
+.status-message .secondary-button { display: block; margin-top: 10px; }
+button:disabled, select:disabled { cursor: not-allowed; opacity: .6; }
+:focus-visible { outline: 3px solid #bc7729; outline-offset: 3px; }
+.table-scroll { overflow-x: auto; }
+.budget-editor { border-bottom: 1px solid #d8dcd6; margin-bottom: 12px; }
+.budget-row { flex-wrap: wrap; gap: 10px; }
+.budget-row label { flex: 1; min-width: 160px; }
+.form input, .form select, .form textarea { background: white; color: #1d2421; min-width: 0; }
+@media (max-width: 480px) {
+  .summary-grid { grid-template-columns: 1fr; }
+  .category-numbers { flex-direction: column; gap: 4px; }
+  .tabs button { white-space: nowrap; }
 }
